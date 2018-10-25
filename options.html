@@ -1,0 +1,47 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+<head>
+    <title>Highlight AEON Widgets</title>
+    <style>
+        body {
+            font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+            font-size: 100%;
+        }
+
+        #status {
+            /* avoid an excessively wide status text */
+            white-space: pre;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 400px;
+        }
+
+        .template-row {
+            display: none;
+        }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="jquery.min.js"></script>
+    <script src="options.js"></script>
+</head>
+<body>
+    <div id="status"></div>
+    <table id="widgetid_info_table">
+        <tr><th>widgetid Prefix</th><th>Outline Color</th></tr>
+        <tr class='template-row'><td><input type="text" class="widgetid_prefix" /></td><td><input type="text" class="color" /></td></tr>
+    </table>
+    <button id="AddButton">Add</button>
+    <button id="SaveButton">Save</button>
+</body>
+</html>
