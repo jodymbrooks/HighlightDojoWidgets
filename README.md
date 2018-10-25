@@ -3,7 +3,9 @@ If a page is built with Dojo Toolkit (Dojo 1), this extension will highlight the
 
 Each time the extension button is pressed, it will re-highlight the widgets (thus with new randomized colors).
 
+
 *INSTALLATION*
+
 Since I'm still just working on this, I just drag the folder into the Extensions tab in Chrome to install it. Eventually it would be nice to actually package it up.  Too early in the process for that now.
 
 
@@ -14,6 +16,7 @@ I would like to make the options page take and save custom prefixes for the widg
 For now I'm just ignoring dijit_* and dojox_* widgets so it just gets custom widgets.
 
 If you'd like to vary the highlighting, edit the highlightTheWidgets function in content.js. 
+
 
 *CAVEATS*
 
